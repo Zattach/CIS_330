@@ -1,0 +1,71 @@
+Linking:	(Ch. 7  of the book)
+
+- It is so slow when compiling files into an executable. If we compile each
+	object separately and then compile those into an executable it
+	will be faster/easier.
+
+	----------------------------------------------------------------------
+
+	gcc -g -o test test.c square1.c 					|compiler driver|
+				V
+	cpp [args] test.c /tmp/test.i 						|preprocessor|
+	cc1 /tmp/test.i [args] -o /tmp/test.s 				|compiler|
+	as [args] -o /tmp/test.o /tmp/test.s 				|assembler|
+		... same with square1.c ...
+	ld -o test [sys. objs] /tmp/test.o /tmp/square1.o 	|linker|
+
+	----------------------------------------------------------------------
+
+- A compiler driver (gcc) actually invokes several other tools.
+
+- What does a linker do?
+	- Merges object files (.o) into a single executable file (.exe)
+	- Resolves external references:
+		- calls stuff in header files
+	- Relocates symbols:
+		- relocates all symbols from one .o file to a new position on .exe
+		- updates all references to used symbols
+
+- Why Linkers?
+	- They are Modular
+		- can be written as a collection of small source files
+	- They are Efficient in both time and space
+		- time: change one source file, compile, and relink
+		- space: libraries can be aggregated together
+
+- Executable and Linkable Format
+	- Standard binary format for object files
+	- results with a.out (assembly output)
+
+- ELF Format:
+	- ELF header
+	- Program header table
+		- virtual addresses
+	- .text section
+		- code
+	- .data section
+	 	- initialized (static) data
+	- .bss section
+		- uninitalized (static) data
+		- use as little as possible
+	- .symtab section
+		- symbol table
+		- variable names
+	- .rel.text
+		- addresses of instructions that will be modified in the .exe
+		- instructions for modifying
+	- .rel.data
+		- addresses of pointer data to be modified in the merged .exe
+	- debug section
+		- info for symbolic debugging (gcc -g)
+
+- Strong vs. Weak symbols
+	- strong: procedures and initialized globals
+	- weak: uninitialized globals	
+		- can avoid confusion by declaring variable as extern 
+					extern int x;
+
+- Linker's Symbol Rules:
+	1. A strong symbol can only appear once
+	2. A weak symbol can be overwritten by a strong symbol w/ same name
+	3. If multiple weak symbols, Then linker can pick arbitrary one
