@@ -1,0 +1,20 @@
+Memory Allocation (c++):
+- instead of malloc() we use new (variable type)
+	int *intptr = new int;
+	int *array = new int[10];
+	int **array2D = new int*[5];
+	for(int i = 0; i < 5; i++){
+		array2D[i] = new int[5];
+	}
+
+- instead of free() we use delete (ptr name)
+	delete intptr;
+	delete []array;
+	for(int i = 0; i < 5; i++){
+		delete []array2D[i];
+	}
+	delete []array2d;
+
+Commands (bash):
+- top shows programs running on the machine
+- ps shows precesses running on the machine and who is running them

@@ -1,0 +1,34 @@
+Including file in command line (c):
+- main includes arguments:
+	- int argc:			# of arguments to include
+	- char *argv[]:		text of arguments to read
+
+	#include <stdio.h>
+
+	int main(int argc, char *argv[]){
+		...
+	}
+
+	called with:
+
+	./program input_file.txt
+
+- another example:
+	gcc -o myprog myprog.c
+	argc:		4
+	argv[0]:	gcc
+	argv[1]:	-o
+	argv[2]:	myprog
+	argv[3]:	myprog.c
+
+Namespace (c++):
+- allows you to use nested objects:
+	animals::quadraped::sheep sheep1
+
+Input (c++):
+	int userinput;
+	cin >> userinput
+
+Output (c++):
+	int cpoutput = 4;
+	cout << cpoutput << endl;

@@ -1,0 +1,39 @@
+Containers:
+- called many things in different languages (templates, generics...)
+- included in C++ in the STL (Standard Template Library)
+- Templates:
+	- a way to make a generic datatype for a variable that can be specified later
+	- allows us to move code from this:
+
+	void print(int value){
+		std::cout << "The value is " << value << std::endl;
+	}
+
+	void print(double value){
+		std::cout << "The value is " << value << std::endl;
+	}
+
+	void print(std::string value){
+		std::cout << "The value is " << value << std::endl;
+	}
+
+	- into something more pleasant like this:
+
+	template<typename T>
+	void print(T value){
+		std::out << "The value is " << value << std::endl;
+	}
+
+- Vectors:
+	- similar to an array, but of variable size
+	- assuming T is any type or class
+
+	vector<T> v; 
+	v.empty();
+	v.size();
+	v.push_back(t);
+	v.pop_back();
+	v[i];
+	v = v1;		//deep copy
+
+- Iterators:
