@@ -1,0 +1,17 @@
+** Project name: P2P Battleship
+
+** Project repository: 330-group_project
+
+** Team member: Noah Palmer, Jeremiah Clothier, Zach Domke
+
+** Description (1-3 paragraphs):
+We will be building a game of Battleship. Our version will be played over a server such as a raspberry pi or another laptop so that the game can be played on two different laptops. This project will be consisting of 3 main sections, all of which will be tricky, but we are ready to learn. The first part is the actual mechanics of the game and programming the logic in C++. Battleship is a fairly standard game and game rules can be looked up online at the link <https://www.cs.nmsu.edu/~bdu/TA/487/brules.htm>. The second part is building the gui interface. We will be doing some research into gui implementations for C++. One quick search brings up a program called QT. We will be investigating these options. The third part is going to be programming the server so that the application can be run on two computers. This is going to require some research but we feel it is plausible. This will also be a great learning tool for us.
+
+** Implementation approach:
+We will write the logic of the game in C++ and we will try to write the networking side in Python. We will try to use a GUI for our game, but we are unsure of which one right now. We will primarily work over bitbucket for our coordination.
+
+
+** Risk management plan (max 1 paragraph):
+Ideally, we'd like both players to be able to play against each other on separate computers. Thus, eliminating the ability to cheat. However, without much prior knowledge we may find out that establishing a P2P connection for the functionality of our game is too difficult of a task to achieve in the allotted time for this project. Similarly, if a GUI proves to be too high above our heads, we will move toward an ASCII based game.
+
+If we are unable to establish a P2P connection we will result to a local version of the game which would allow two players to face off whilst using the same computer

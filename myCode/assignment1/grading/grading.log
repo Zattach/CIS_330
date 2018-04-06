@@ -1,0 +1,99 @@
+
+-----<< Problem 4-first: >>------
+[2018-01-19 19:34:05.931282] gcc -std=c99 -c first.c
+Inputs: 
+STDOUT:
+
+STDERR:
+PASS
+Comparing against master output:
+[2018-01-19 19:34:06.030376] diff -y -B -b first.output first.master
+Inputs: 
+STDOUT:
+							      >	** Welcome to Thinking in C **
+							      >	(You'll be glad you came!)
+
+STDERR:
+
+-----<< Problem 4-first: >>------
+[2018-01-19 19:34:06.062764] numdiffs=`diff  -B -b first.output first.master | wc -l`
+Inputs: 
+STDOUT:
+
+STDERR:
+Found 0 differences (within acceptable tolerance)
+PASS
+-----<< Problem 4-avg: >>------
+[2018-01-19 19:34:06.139942] gcc -std=c99 -c avg.c
+Inputs: 
+STDOUT:
+
+STDERR:
+PASS
+-----<< Problem 4-avg: >>------
+[2018-01-19 19:34:06.230549] ./avg
+Inputs: 10
+12
+
+STDOUT:
+Enter the 1st number:
+Enter the 2nd number:
+The average is 11.000000
+
+STDERR:
+
+-----<< Problem 4-avg: >>------
+[2018-01-19 19:34:06.261206] ./avg
+Inputs: 89
+-3
+
+STDOUT:
+Enter the 1st number:
+Enter the 2nd number:
+The average is 43.000000
+
+STDERR:
+
+Comparing against master output:
+[2018-01-19 19:34:06.298744] diff -y -B -b avg.output avg.master
+Inputs: 
+STDOUT:
+Enter the 1st number:						Enter the 1st number:
+Enter the 2nd number:						Enter the 2nd number:
+The average is 11.000000					The average is 11.000000
+Enter the 1st number:						Enter the 1st number:
+Enter the 2nd number:						Enter the 2nd number:
+The average is 43.000000					The average is 43.000000
+
+STDERR:
+
+-----<< Problem 4-avg: >>------
+[2018-01-19 19:34:06.333041] numdiffs=`diff  -B -b avg.output avg.master | wc -l`
+Inputs: 
+STDOUT:
+
+STDERR:
+Found 0 differences (within acceptable tolerance)
+PASS
+-----<< Problem 4-rps: >>------
+[2018-01-19 19:34:06.388306] gcc -std=c99 -c rps.c
+Inputs: 
+STDOUT:
+
+STDERR:
+PASS
+-----<< Problem 4-rps: >>------
+[2018-01-19 19:34:06.484531] ./rps
+Inputs: scissors
+rock
+paper
+22
+rockkk
+
+STDOUT:
+Enter rock, paper, or scissors: You picked scissors.
+Computer picked paper.
+Scissors wins.
+
+STDERR:
+PASS
