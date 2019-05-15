@@ -1,0 +1,46 @@
+zdomke@ix-dev: ~/CIS_330/uoregon-cis330/assignment2 7$ make memcheck
+valgrind --leak-check=yes --track-origins=yes test-all.exe
+==14875== Memcheck, a memory error detector
+==14875== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==14875== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==14875== Command: test-all.exe
+==14875== 
+
+Problem 1:
+Please enter the size of the square [2-10]: 6
+0 1 2 3 4 5 
+0 1 2 3 4 5 
+0 1 2 3 4 5 
+0 1 2 3 4 5 
+0 1 2 3 4 5 
+0 1 2 3 4 5 
+
+
+Problem 2:
+Please enter the height of the triangle [1-5]: 5
+        0 
+      0 1 2 
+    0 1 2 3 4 
+  0 1 2 3 4 5 6 
+0 1 2 3 4 5 6 7 8 
+
+
+Problem 3:
+Please enter the size of the diamnod [an odd number between 3 and 9 (inclusive)]: 7
+      0 
+    0 1 2 
+  0 1 2 3 4 
+0 1 2 3 4 5 6 
+  0 1 2 3 4 
+    0 1 2 
+      0 
+
+==14875== 
+==14875== HEAP SUMMARY:
+==14875==     in use at exit: 0 bytes in 0 blocks
+==14875==   total heap usage: 23 allocs, 23 frees, 2,632 bytes allocated
+==14875== 
+==14875== All heap blocks were freed -- no leaks are possible
+==14875== 
+==14875== For counts of detected and suppressed errors, rerun with: -v
+==14875== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
